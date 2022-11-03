@@ -1,2 +1,14 @@
-<app-input></app-input>
-<app-tabella [contatti]="listaContatti"></app-tabella>
+<app-add-contact (addContact)="onCreateContact($event)"></app-add-contact>
+
+<div class="row">
+  <div class="col">
+    <app-table-contact
+      [contactList]="listaContatti"
+      (deleteContact)="onRemoveContact($event)"
+      (detailContact)="onInfoContact($event)"
+    ></app-table-contact>
+  </div>
+  <div class="col" *ngIf="infoContact">
+    <app-detail-contact [contact]="infoContact"></app-detail-contact>
+  </div>
+</div>

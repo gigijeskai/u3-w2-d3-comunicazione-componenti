@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { RubricaPage } from './rubrica/rubrica.page';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { TabellaComponent } from './rubrica/tabella/tabella.component';
-import { InputComponent } from './rubrica/input/input.component';
+import { AddContactComponent } from './rubrica/add-contact/add-contact.component';
+import { TableContactComponent } from './rubrica/table-contact/table-contact.component';
+import { DetailContactComponent } from './rubrica/detail-contact/detail-contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,14 +17,12 @@ import { InputComponent } from './rubrica/input/input.component';
     RubricaPage,
     HeaderComponent,
     FooterComponent,
-    TabellaComponent,
-    InputComponent
+    AddContactComponent,
+    TableContactComponent,
+    DetailContactComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
