@@ -8,17 +8,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>
-        <button type="button" class="btn btn-danger btn-sm float-end mx-2">
-          +</button
-        ><button type="button" class="btn btn-warning btn-sm float-end mx-2">
-          -
-        </button>
+    <tr *ngFor="let contatto of contatti">
+      <th scope="col">{{ contatto.nome }}</th>
+      <td scope="col">{{ contatto.cognome }}</td>
+      <td scope="col">{{ contatto.telefono }}</td>
+
+      <td scope="col">
+        <button type="button" class="btn btn-danger btn-sm mx-2">+</button
+        ><button type="button" class="btn btn-warning btn-sm mx-2">-</button>
       </td>
     </tr>
   </tbody>
